@@ -1,5 +1,5 @@
 /* Basic Style */
-body {
+.body {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
@@ -36,7 +36,7 @@ body {
 .main__top__row {
   display: flex;
 }
-ul {
+.main__list {
   margin: 0;
   padding: 0px;
 }
@@ -48,7 +48,7 @@ input,
 button{
   outline: none;
 }
-button {
+.main__button {
   background: none;
   border: 0px;
   color: #888;
@@ -57,12 +57,11 @@ button {
   font-family: Lato, sans-serif;
   cursor: pointer;
 }
-button:hover {
+.main__button:hover {
   color: #3a3a3a;
 }
 /* Heading */
-h3,
-label[for="new-task"] {
+.main__headline{
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -71,7 +70,8 @@ label[for="new-task"] {
   margin: 0;
   text-transform: uppercase;
 }
-input[type="text"] {
+/*input[type="text"]*/ 
+.main__input{
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -83,12 +83,12 @@ input[type="text"] {
   font-family: Lato, sans-serif;
   color: #888;
 }
-input[type="text"]:focus {
+.main__input:focus {
   color: #333;
 }
 
 /* New Task */
-label[for="new-task"] {
+.main__label__new {
   display: block;
   margin: 0 0 20px;
 }
@@ -97,7 +97,7 @@ label[for="new-task"] {
 }
 
 /* Task list */
-li {
+.main__list__item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -105,47 +105,47 @@ li {
   justify-content: space-between;
   align-items: center;
 }
-li > * {
+.main__list__item  > * {
   vertical-align: middle;
 }
 
-li > input[type="checkbox"] {
+.main__input__check {
   margin: 0 10px;
 }
-li > label {
+.main__task {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
-li >    input[type="text"] {
+.main__input__text  {
   width: 226px;
 }
-button.main__button__delete img {
+.button__delete__img{
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-button.main__button__delete img:hover {
+.button__delete__img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-ul#completed-tasks label {
+.main__list__complete .main__task{
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-ul li input[type=text] {
+.main__list__item .main__input__text  {
   display: none;
 }
 
-ul li.main__list__item__edit input[type=text] {
+.main__list__item__edit .main__input__text  {
   display: inline-block;
   width: 224px;
 }
 
-ul li.main__list__item__edit label {
+.main__list__item__edit .main__label {
   display: none;
 }
